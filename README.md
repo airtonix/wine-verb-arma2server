@@ -6,6 +6,7 @@ A winetricks verb for installing Arma 2 Operation Arrowhead through Steam under 
 ## Usage
 
 ```
+$ git clone https://github.com/airtonix/wine-verb-arma2server.git
 $ winetricks ./wine-verb-arma2server/arma2server_steam.verb
 ```
 
