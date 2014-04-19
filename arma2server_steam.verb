@@ -1,4 +1,3 @@
-
 w_metadata arma2server_steam games \
     title="Dayz Arma2 Server (Steam)" \
     publisher="Bohemia Interactive" \
@@ -15,7 +14,7 @@ load_arma2server_steam()
     w_call dotnet40
     w_call directx9
     w_call secur32
-    w_call crypt3d
+    w_call crypt32
     w_call msasn1
     w_call msxml3
 
