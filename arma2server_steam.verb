@@ -1,0 +1,29 @@
+
+w_metadata arma2server_steam games \
+    title="Dayz Arma2 Server (Steam)" \
+    publisher="Bohemia Interactive" \
+    year="2010" \
+    media="steam download" \
+    installed_exe1="$W_PROGRAMS_X86_WIN/Steam/steamapps/common/Arma 2 Operation Arrowhead/ArmA2OA.exe"
+
+load_arma2server_steam()
+{
+    W_ARCH=win32
+    w_call corefonts
+    w_call vcrun2010
+    w_call vcrun2008
+    w_call dotnet40
+    w_call directx9
+    w_call secur32
+    w_call crypt3d
+    w_call msasn1
+    w_call msxml3
+
+    w_override_dlls builtin msxml3
+    w_override_dlls builtin crypt3d
+    w_override_dlls builtin secur32
+
+    w_steam_install_game 33930 "Arma 2: Operation Arrowhead"
+    w_declare_exe "$W_PROGRAMS_X86_WIN\\Steam\\steamapps\\common\\Arma\ 2\ Operation\ Arrowhead" "ArmA2OA.exe"
+    
+}
